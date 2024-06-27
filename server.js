@@ -84,6 +84,7 @@ app.post('/chat', async (req, res) => {
     }
 
     const response = await runChat(userInput);
+    console.log({reply:response})
     res.json({ reply: response });
   } catch (error) {
     console.error('Error in chat endpoint:', error);
